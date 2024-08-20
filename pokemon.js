@@ -91,3 +91,11 @@ function handleSearch() {
 }
 
 const closeButton = document.querySelector(".search-close-icon");
+closeButton.addEventListener("click", cleanSearch);
+
+function cleanSearch() {
+  searchInput.value ="";
+  displayPokemon(allPokemons);
+  notFoundMessage.style.display = "none";
+}
+
